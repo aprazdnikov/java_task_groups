@@ -1,1 +1,3 @@
-# java_task_groups
+# Working Groups
+
+Микросервис Рабочих групп

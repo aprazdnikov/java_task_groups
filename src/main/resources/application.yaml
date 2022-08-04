@@ -1,0 +1,25 @@
+server:
+  port: 8080
+  servlet:
+    context-path: "/api"
+
+spring:
+  datasource:
+    password: ${POSTGRESQL_PASS}
+    username: ${POSTGRESQL_USER}
+    jdbc-url: ${POSTGRESQL_URL}
+    hikari:
+      auto-commit: false
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    change-log: classpath:db/db.changelog-master.xml
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+
+kafka:
+  server: ${KAFKA_SERVER}
+  producer:
+    id: ${KAFKA_PRODUCER_ID}
+  group:
+    id: ${KAFKA_GROUP_ID}

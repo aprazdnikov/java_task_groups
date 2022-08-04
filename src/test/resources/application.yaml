@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: test
+  liquibase:
+    change-log: classpath:db/db.test-changelog.xml
+  datasource:
+    jdbc-url: ${DB_POSTGRES_URL}
+    username: ${DB_POSTGRES_USERNAME}
+    password: ${DB_POSTGRES_PASSWORD}
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
